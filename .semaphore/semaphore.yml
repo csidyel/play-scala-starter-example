@@ -34,6 +34,15 @@ blocks:
           # job is to work with your code.
           - checkout
           - sem-version scala 2.12
-          # Cache 
+          # Cache restore
           - cache restore sbt-$SEMAPHORE_GIT_BRANCH
+          - cache restore gradle-$SEMAPHORE_GIT_BRANCH
+          # Cache store
           - cache store sbt-$SEMAPHORE_GIT_BRANCH $HOME/.sbt
+          - cache store gradle-$SEMAPHORE_GIT_BRANCH $HOME/.gradle/caches
+          
+      - name: "Running tests"
+        commands:
+          
+          - scripts/test-sbt
+          - scripts/test-gradle
