@@ -17,4 +17,3 @@ scalacOptions ++= Seq(
   "-deprecation",
   "-Xfatal-warnings"
 )
-logBuffered in Test := false
