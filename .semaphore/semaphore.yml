@@ -42,3 +42,4 @@ blocks:
           - cache store gradle-$SEMAPHORE_GIT_BRANCH $HOME/.gradle/caches
           # Running tests
           - scripts/test-sbt
+          - scripts/test-gradle
