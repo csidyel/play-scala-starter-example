@@ -36,9 +36,9 @@ blocks:
           - sem-version scala 2.12
           # Cache restore
           - cache restore sbt-$SEMAPHORE_GIT_BRANCH
-          # cache restore gradle-$SEMAPHORE_GIT_BRANCH
+          - cache restore gradle-$SEMAPHORE_GIT_BRANCH
           # Cache store
           - cache store sbt-$SEMAPHORE_GIT_BRANCH $HOME/.sbt
-          # cache store gradle-$SEMAPHORE_GIT_BRANCH $HOME/.gradle/caches
+          - cache store gradle-$SEMAPHORE_GIT_BRANCH $HOME/.gradle/caches
           # Running tests
           - scripts/test-sbt
