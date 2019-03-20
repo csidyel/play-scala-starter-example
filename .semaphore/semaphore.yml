@@ -6,7 +6,7 @@ agent:
     os_image: ubuntu1804
 
 blocks:
-  - name: "Scala with Play on Java 11"
+  - name: "Scala with Play on Java "
     task:
       env_vars: 
         - name: SCALA_VERSION
